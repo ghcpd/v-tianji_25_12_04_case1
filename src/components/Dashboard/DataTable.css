@@ -1,0 +1,60 @@
+.data-table {
+  overflow-x: auto;
+}
+
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 2px solid #e0e0e0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.data-table td {
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+}
+
+.data-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.metric-name-cell {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.metric-value-cell {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.metric-change-cell {
+  color: #666;
+}
+
+.metric-trend-cell {
+  font-size: 18px;
+  text-align: center;
+}
+
+.metric-date-cell {
+  color: #999;
+  font-size: 12px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+

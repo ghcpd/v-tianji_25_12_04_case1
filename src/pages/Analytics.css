@@ -1,0 +1,44 @@
+.analytics {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.analytics-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.analytics-content {
+  display: flex;
+  gap: 24px;
+}
+
+.analytics-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.analytics-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.analytics-loading,
+.analytics-error {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+}
+
+.analytics-error {
+  color: #d32f2f;
+}
+
