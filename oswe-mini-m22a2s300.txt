@@ -1,0 +1,120 @@
+User: Prompt
+
+Task:
+Analyze the entire frontend codebase and locate design or architectural ambiguities. For every ambiguity identified, produce one structured section with the following format:
+
+Ambiguity: [Title]
+Question: A precise question about the design decision that appears unclear or conflicting
+Context: File paths, relevant code excerpts, and the specific inconsistent or contradictory patterns that expose the ambiguity
+Impact: The potential issues this ambiguity may cause (such as maintainability risks, performance degradation, scalability issues, inconsistent patterns, or team misunderstanding)
+Discussion Points: The topics the engineering team must discuss to resolve the ambiguity, clarify the decision, or establish an agreed direction
+
+Additional Requirements:
+
+Do not modify the source code and do not propose code changes.
+
+Only identify ambiguities; do not fix or refactor anything.
+
+Generate multiple Ambiguity sections; each section must focus on one clear ambiguity.
+
+The output must not be printed directly in the chat.
+
+The output must be delivered as a generated file (for example: TXT, Markdown, or JSON).
+
+The file should contain only the final findings in the required format.
+
+Title: E-commerce Frontend Codebase — Architectural Ambiguity Review
+Description:
+
+Review the existing e-commerce frontend codebase and identify unclear or conflicting architectural decisions based solely on the existing source code.
+
+The analysis must not change or modify any source code.
+
+GitHub Copilot: Perfect — I understand the task: I'll analyze the frontend codebase for architectural/design ambiguities and produce a findings file. My next step is to create a structured plan and begin scanning key files to gather evidence.
+
+Created 5 todos
+
+Searched for regex `useContext|createContext|useReducer|Provider|Context`, 20 results
+
+Searched for regex `dashboardStore|store/|createStore|redux|zustand`, 11 results
+
+Searched for regex `fetch\(|axios|apiUtils|Api|api`, 20 results
+
+Searched for regex `: any|as any|// @ts-ignore`, 9 results
+
+Searched for regex `\.css'|className=|styled`, 20 results
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_04_case1/tsconfig.json)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_04_case1/src/main.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_04_case1/src/App.tsx)
+
+Searched for regex `PrivateRoute|RequireAuth|useAuth|auth`, 20 results
+
+Searched for regex `ErrorBoundary|console\.error|try \{|catch \(|window\.addEventListener|Sentry|log\(`, 20 results
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_04_case1/src/store/dashboardStore.ts)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_04_case1/src/utils/apiUtils.ts)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_04_case1/src/services/userService.ts)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_04_case1/src/pages/Settings.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_04_case1/src/contexts/AuthContext.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_04_case1/src/components/Layout/Sidebar.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_04_case1/src/pages/Users.tsx)
+
+Proceeding to scan repository files and collect evidence (fetching code excerpts). I'll mark the scan task in-progress and continue.
+
+Starting: *Scan repository & collect evidence* (2/5)
+
+Created [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_04_case1/AMBIGUITIES.md)
+
+Great — I finished scanning key files and gathered evidence; next I will structure each identified ambiguity into the findings document.
+
+Starting: *Identify and document ambiguities* (3/5)
+
+I'm structuring the final Ambiguity sections into the Markdown file and will now finalize the draft formatting and check consistency.
+
+Starting: *Draft findings file* (4/5)
+
+Nice — the findings draft is saved. Finalizing: I'll complete the review and close the task by creating the final output file (already created), then mark all todos completed.
+
+Starting: *Finalize review and create output file* (5/5)
+
+Completed: *Finalize review and create output file* (5/5)
+
+Perfect! I documented multiple architectural ambiguities and saved them to AMBIGUITIES.md. Next: tell me if you want these items prioritized, converted to JSON, or prepared as a PR checklist.## ✅ Summary — Analysis complete
+**I analyzed the frontend codebase and produced a structured report of architectural/design ambiguities.** The findings are saved to AMBIGUITIES.md at the repository root.  
+Next: tell me if you want the items **prioritized**, **converted to JSON**, or **prepared as a PR checklist**. 🔧
+
+---
+
+### 🔎 What I delivered
+- **File:** AMBIGUITIES.md  
+- **Contains:** Multiple sections; each section follows your required format:
+  - Ambiguity (title)  
+  - Question (precise)  
+  - Context (file paths + code excerpts)  
+  - Impact (risks)  
+  - Discussion Points (team topics to resolve)
+
+---
+
+### 📌 Where the file is
+- Path: AMBIGUITIES.md — open to review, suggest edits (non-code), or request alternate formats.
+
+---
+
+If you want a next action, pick one:
+1. Prioritize the ambiguities by risk/effort.  
+2. Convert the report to JSON or TXT.  
+3. Generate a PR checklist for team resolution steps.
+
+Which do you want me to do next?
+
+Made changes.
