@@ -1,0 +1,31 @@
+Prompt
+
+Task:
+Analyze the entire frontend codebase and locate design or architectural ambiguities. For every ambiguity identified, produce one structured section with the following format:
+
+Ambiguity: [Title]
+Question: A precise question about the design decision that appears unclear or conflicting
+Context: File paths, relevant code excerpts, and the specific inconsistent or contradictory patterns that expose the ambiguity
+Impact: The potential issues this ambiguity may cause (such as maintainability risks, performance degradation, scalability issues, inconsistent patterns, or team misunderstanding)
+Discussion Points: The topics the engineering team must discuss to resolve the ambiguity, clarify the decision, or establish an agreed direction
+
+Additional Requirements:
+
+Do not modify the source code and do not propose code changes.
+
+Only identify ambiguities; do not fix or refactor anything.
+
+Generate multiple Ambiguity sections; each section must focus on one clear ambiguity.
+
+The output must not be printed directly in the chat.
+
+The output must be delivered as a generated file (for example: TXT, Markdown, or JSON).
+
+The file should contain only the final findings in the required format.
+
+Title: E-commerce Frontend Codebase — Architectural Ambiguity Review
+Description:
+
+Review the existing e-commerce frontend codebase and identify unclear or conflicting architectural decisions based solely on the existing source code.
+
+The analysis must not change or modify any source code.
