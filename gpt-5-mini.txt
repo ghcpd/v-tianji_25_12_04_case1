@@ -1,0 +1,118 @@
+jitianxiang: Prompt
+
+Task:
+Analyze the entire frontend codebase and locate design or architectural ambiguities. For every ambiguity identified, produce one structured section with the following format:
+
+Ambiguity: [Title]
+Question: A precise question about the design decision that appears unclear or conflicting
+Context: File paths, relevant code excerpts, and the specific inconsistent or contradictory patterns that expose the ambiguity
+Impact: The potential issues this ambiguity may cause (such as maintainability risks, performance degradation, scalability issues, inconsistent patterns, or team misunderstanding)
+Discussion Points: The topics the engineering team must discuss to resolve the ambiguity, clarify the decision, or establish an agreed direction
+
+Additional Requirements:
+
+Do not modify the source code and do not propose code changes.
+
+Only identify ambiguities; do not fix or refactor anything.
+
+Generate multiple Ambiguity sections; each section must focus on one clear ambiguity.
+
+The output must not be printed directly in the chat.
+
+The output must be delivered as a generated file (for example: TXT, Markdown, or JSON).
+
+The file should contain only the final findings in the required format.
+
+Title: E-commerce Frontend Codebase — Architectural Ambiguity Review
+Description:
+
+Review the existing e-commerce frontend codebase and identify unclear or conflicting architectural decisions based solely on the existing source code.
+
+The analysis must not change or modify any source code.
+
+GitHub Copilot: I'll create a short plan and mark the first task in-progress, then scan key files for architectural patterns. 
+
+Created 5 todos
+
+Progress update: Plan created and marked in-progress. Next I'll scan core files (contexts, services, store, key pages/components) to gather evidence for ambiguities. I'll run parallel file searches to collect relevant files. 
+
+Searched for files matching `**/src/**/AuthContext.tsx`, 1 match
+
+Searched for files matching `**/src/**/services/*.ts`, 3 matches
+
+Searched for files matching `**/src/**/store/*.ts`, 1 match
+
+Searched for files matching `**/src/**/pages/*.tsx`, 4 matches
+
+Searched for text `fetch(` (`**/src/**`), 16 results
+
+Searched for text `axios` (`**/src/**`), no results
+
+Searched for text `useContext(` (`**/src/**`), 1 result
+
+Searched for text `createContext(` (`**/src/**`), no results
+
+Next I'll open the found files to collect code excerpts for each ambiguity. I'll read AuthContext.tsx, apiUtils.ts, dashboardStore.ts, and service files. 
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/gpt-5-mini/src/contexts/AuthContext.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/gpt-5-mini/src/utils/apiUtils.ts)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/gpt-5-mini/src/store/dashboardStore.ts)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/gpt-5-mini/src/services/authService.ts)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/gpt-5-mini/src/services/userService.ts)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/gpt-5-mini/src/services/analyticsService.ts)
+
+I'll now inspect some pages and components to gather patterns around styling, state management, and API usage. I'll open Analytics.tsx, Users.tsx, and a couple of components. 
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/gpt-5-mini/src/pages/Analytics.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/gpt-5-mini/src/pages/Users.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/gpt-5-mini/src/components/Layout/Layout.tsx)
+
+I'll assemble the ambiguity findings and create `AMBIGUITIES.md` with the required structure. This will include multiple sections derived from observed inconsistencies: API client vs direct fetch usage, state management mix (Zustand vs component state), error handling patterns, date handling, types duplication, and auth token/storage practices. I'll write the file now. 
+
+Starting: *Identify ambiguities* (3/5)
+
+Progress update: core files scanned; now creating `AMBIGUITIES.md` with structured ambiguity sections. 
+
+Using "Apply Patch"
+
+I'll add the report file at the repository root with an absolute path. 
+
+Using "Apply Patch"
+
+
+```
+
+```
+I'll mark the identify and draft steps completed and finalize the todo list. 
+
+Completed: *Identify ambiguities* (3/5)
+
+I've scanned the codebase and created a structured ambiguity report file at AMBIGUITIES.md in the project root containing multiple focused ambiguity sections with context, impacts, and discussion points.
+
+**What I did**
+- Scanned core files and patterns in contexts, services, store, pages, and utils.
+- Collected code excerpts and identified ambiguous or conflicting architectural/design decisions.
+- Created AMBIGUITIES.md containing the full findings in the required structured format.
+
+**Next steps (optional)**
+- Want me to open the file and walk through any particular ambiguity in more depth?
+- I can also produce a short prioritized checklist for resolving these ambiguities with remediation options (non-code, process, or migration steps).
+
+File created:
+- AMBIGUITIES.md
+
+If you'd like, I can also:
+- Create a PR with the file and a short summary for maintainers.
+- Run a more exhaustive search to find additional edge-case locations for some ambiguities (e.g., more fetch usages or duplicate types).
+- Generate a short RFC template for one of the ambiguities (e.g., API client standardization) to help the team converge.
+
+Which follow-up would you prefer?
+
+Made changes.
